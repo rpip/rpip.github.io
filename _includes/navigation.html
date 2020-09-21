@@ -1,0 +1,12 @@
+<nav>
+  <div>
+    <h1 class="header-title">
+      <a href="/" class="no-highlight ">Yao Adzaku</a>
+    </h1>
+  </div>
+  <div class="links">
+    {% for item in site.data.navigation %}
+    <h3><a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a></h3>
+    {% endfor %}
+  </div>
+</nav>
